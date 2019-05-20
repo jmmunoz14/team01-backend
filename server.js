@@ -62,9 +62,8 @@ app.use('/partidas', partidasRouter);
 app.use('/chats', chatsRouter);
 app.use('/blogs', blogsRouter);
 
-const host = '0.0.0.0';
-const port = process.env.PORT || 3001;
-app.listen(port, host, function() {
-  console.log("Server started......." + {port} +"  "+ {host});
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
 
