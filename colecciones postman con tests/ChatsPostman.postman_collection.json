@@ -1,0 +1,212 @@
+{
+	"info": {
+		"name": "ChatsPostman",
+		"_postman_id": "a8665f20-22bc-9de6-3018-42d503886225",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Chats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "946e6407-e44e-4982-a65d-2fa642bf03cf",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/chats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Chat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0a4a8975-15e3-4ec4-9b1d-40e6fd1f906f",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/chats/5c7c86566d1e0936382f964e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"5c7c86566d1e0936382f964e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Chat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f95a4a21-9332-4a35-ac3d-2d80ff34c810",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"color\": \"#e786d1POST\",\n    \"enabled\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/chats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Chat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b09f9cc7-2a4f-435b-915b-f0228b90d778",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"color\": \"#e786d1PUT\",\n    \"enabled\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/chats/5c7c741304e36d155c3889ed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"5c7c741304e36d155c3889ed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Chat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5cdf5082-4baf-43b0-a70e-e6e30061a19e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/chats/5c7c741304e36d155c3889ed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chats",
+						"5c7c741304e36d155c3889ed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
