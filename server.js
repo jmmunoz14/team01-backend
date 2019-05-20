@@ -62,7 +62,7 @@ app.use('/partidas', partidasRouter);
 app.use('/chats', chatsRouter);
 app.use('/blogs', blogsRouter);
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
