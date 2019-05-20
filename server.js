@@ -65,6 +65,6 @@ app.use('/blogs', blogsRouter);
 const host = '0.0.0.0';
 const port = process.env.PORT || 3001;
 app.listen(port, host, function() {
-  console.log("Server started.......");
+  console.log("Server started......." + {port} +"  "+ {host});
 });
 
