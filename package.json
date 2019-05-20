@@ -22,5 +22,8 @@
     "nodemon": "^1.19.0",
     "passport": "^0.4.0"
   },
-  "proxy":"https://team01back.herokuapp.com/"
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.4.1"
+    }
 }
