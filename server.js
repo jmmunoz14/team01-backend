@@ -39,8 +39,6 @@ app.use("/juegos", juegoRoutes);
 app.use("/habilidades", habilidadRoutes);
 
 // start server
-var http = require ('http');
-var server = http.Server(app);
 
 // error handler
 app.use((err, req, res, next) => {
@@ -64,8 +62,8 @@ app.use('/partidas', partidasRouter);
 app.use('/chats', chatsRouter);
 app.use('/blogs', blogsRouter);
 
-const PORT = process.env.PORT || 8080;
-server.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+  console.log(`Mixing it up on port ${PORT}`)
+})
 
