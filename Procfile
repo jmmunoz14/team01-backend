@@ -1,1 +1,1 @@
-"start": "npm run build && node server.js"
+"start": "node server.js"
