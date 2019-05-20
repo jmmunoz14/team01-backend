@@ -40,6 +40,8 @@ app.use("/habilidades", habilidadRoutes);
 
 // start server
 
+var server = http.Server(app);
+
 // error handler
 app.use((err, req, res, next) => {
     if (err.name === 'ValidationError') {
@@ -63,7 +65,7 @@ app.use('/chats', chatsRouter);
 app.use('/blogs', blogsRouter);
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
