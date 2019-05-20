@@ -2,7 +2,7 @@
   "name": "copia-proyecto",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "npm run build:prod",
+    "postinstall": "npm run build",
     "start": "node server.js"
   },
   "dependencies": {
