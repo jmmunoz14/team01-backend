@@ -2,7 +2,7 @@
   "name": "copia-proyecto",
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js"
+    "start": " NODE_ENV=production node server.js"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
