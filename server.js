@@ -1,3 +1,7 @@
+mongoose.connect("mongodb://admin:password1@ds159025.mlab.com:59025/team1web")
+.then(db=>console.log("connectado a la base de datos"))
+.catch( err => console.log(err));
+
 
 //import router
 var partidasRouter = require('./routes/partidas');
@@ -23,9 +27,7 @@ const habilidadRoutes = require("./routes/habilidades");
 
 var app = express();
 
-mongoose.connect("mongodb://admin:password1@ds159025.mlab.com:59025/team1web")
-.then(db=>console.log("connectado a la base de datos"))
-.catch( err => console.log(err));
+
  
 // middleware
 app.set('jwt',jwt);
