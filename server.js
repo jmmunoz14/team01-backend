@@ -24,6 +24,8 @@ const habilidadRoutes = require("./routes/habilidades");
 
 
 var app = express();
+
+mongoose.connect("mongodb://admin:password1@ds159025.mlab.com:59025/team1web");
  
 // middleware
 app.set('jwt',jwt);
