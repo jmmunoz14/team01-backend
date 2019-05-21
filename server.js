@@ -1,7 +1,3 @@
-mongoose.connect("mongodb://admin:password1@ds159025.mlab.com:59025/team1web")
-.then(db=>console.log("connectado a la base de datos"))
-.catch( err => console.log(err));
-
 
 //import router
 var partidasRouter = require('./routes/partidas');
@@ -12,6 +8,12 @@ var blogsRouter = require('./routes/blogs');
 const path = require('path');
 const morgan = require('morgan');
 var mongoose = require('mongoose');
+
+mongoose.connect("mongodb://admin:password1@ds159025.mlab.com:59025/team1web")
+.then(db=>console.log("connectado a la base de datos"))
+.catch( err => console.log(err));
+
+
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
